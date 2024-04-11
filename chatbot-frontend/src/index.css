@@ -1,0 +1,141 @@
+/* Overall page styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chat container styling */
+.chat-container {
+  background: white;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  padding: 2em;
+  margin: 2em;
+}
+
+/* Chat messages styling */
+.chat-messages {
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+  overflow-y: auto; /* Scroll only when necessary */
+  height: 400px;
+  width: 100%;
+  font-size: 16px;
+  border-top: 0.5px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Individual message styling */
+.message {
+  background: #ececec;
+  color: #111;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+  max-width: 80%;
+  animation: slideIn 0.5s ease;
+  position: relative;
+}
+
+/* Bot message styling */
+.message.bot {
+  align-self: flex-start;
+}
+
+/* User message styling */
+.message.user {
+  align-self: flex-end;
+  background: #007bff;
+  color: white;
+}
+
+/* Timestamp styling */
+/*.timestamp {
+  font-size: 0.7em;
+  color: #888;
+  margin-top: 8px;
+  position: absolute;
+  bottom: -20px; 
+}
+*/
+.bot.timestamp {
+  left: 0; /* Align bot timestamp to the left */
+}
+
+.user.timestamp {
+  right: 0; /* Align user timestamp to the right */
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* Input field styling */
+.input-field {
+  flex-grow: 1;
+  border: 1px solid #b2b2b2;
+  border-radius: 30px;
+  padding: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+}
+
+/* Send button styling */
+.send-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
