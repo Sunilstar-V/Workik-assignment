@@ -5,7 +5,7 @@ import openai
 app = Flask(__name__)
 CORS(app, resources={r"/query": {"origins": "*"}})
 
-openai.api_key = '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'
+openai.api_key = '*********************'
 
 @app.route('/query', methods=['POST'])
 def query():
